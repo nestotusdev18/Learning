@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Meerkat Email Template</title>
+	  <style type="text/css">
+body {margin: 0; padding: 0; min-width: 100%!important;}
+img {height: auto;}
+.content {width: 100%; max-width: 600px;}
+.header {padding: 10px 0px 0px 12px;}
+.innerpadding {padding: 30px 30px 30px 30px;}
+.tab_innerpadding {padding: 20px 20px 20px 20px;}
+.borderbottom {border-bottom: 1px solid #f2eeed;}
+.subhead {font-size: 15px; color: #ffffff; font-family: sans-serif; letter-spacing: 10px;}
+.h1, .h2, .bodycopy {color: #153643; font-family: sans-serif;}
+.h1 {font-size: 33px; line-height: 38px; font-weight: bold;}
+.h2 {padding: 0 0 15px 0; font-size: 24px; line-height: 28px; font-weight: bold;}
+.bodycopy {font-size: 16px; line-height: 22px;}
+.button {text-align: center; font-size: 18px; font-family: sans-serif; font-weight: bold; padding: 0 30px 0 30px;}
+.button a {color: #ffffff; text-decoration: none;}
+.footer {padding: 0px 30px 25px 30px;}
+.footercopy {font-family: sans-serif; font-size: 14px; color: #ffffff;}
+.footercopy a {color: #ffffff; text-decoration: underline;}
+@media only screen and (max-width: 550px), screen and (max-device-width: 550px) {
+.hide {display: none!important;}
+.buttonwrapper {background-color: transparent!important;}
+.button {padding: 0px!important;}
+.button a {background-color: #e05443; padding: 15px 15px 13px!important;}
+.unsubscribe {display: block; margin-top: 20px; padding: 10px 50px; background: #2f3942; border-radius: 5px; text-decoration: none!important; font-weight: bold;}
+}
+.logo_header{
+padding: 0 20px 10px 0;
+}
+/* Zebra striping */
+.tr__tab:nth-of-type(odd) { 
+background: #eee; 
+}
+.th_tab { 
+background: #b7b39b; 
+color: white; 
+font-weight: bold; 
+}
+.td_tab, .th_tab { 
+padding: 10px; 
+border: 1px solid #ccc; 
+text-align: left; 
+font-size: 15px;
+}
+@media only screen and (max-width: 760px),(min-device-width: 768px) and (max-device-width: 1024px)  {
+.tab { 
+width: 100%; 
+padding: 0px 30px;
+}
+.table_tab, .thead_tab, .tbody_tab, .th_tab, .td_tab, .tr_tab { 
+display: block; 
+}
+.thead_tab .tr_tab { 
+position: absolute;
+top: -9999px;
+left: -9999px;
+}
+.tr_tab { border: 1px solid #ccc; }
+.td_tab { 
+border: none;
+border-bottom: 1px solid #eee; 
+position: relative;
+padding-left: 40%; 
+}
+.td_tab:before{ 
+position: absolute;
+top: 6px;
+left: 6px;
+width: 45%; 
+padding-right: 10px; 
+white-space: nowrap;
+content: attr(data-column);
+color: #000;
+font-weight: bold;
+font-size: 14px;
+}
+}
+.body_bg{
+background-color: rgb(246, 248, 241) !important;
+}
+.table_bg{
+background-color: #fff !important;
+}
+.table_padding{
+padding: 0px 30px 0px 30px;
+}
+.thead_bg{
+background-color: rgb(234, 242, 220);
+}
+
+</style>
+</head>
+   <body class="body_bg">
+      <table width="100%" bgcolor="#f6f8f1" border="0" cellpadding="0" cellspacing="0">
+         <tr>
+            <td>
+               <table  class="content table_bg" align="center" cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                     <td bgcolor="#eaf2dc" class="header">
+                        <table width="70" align="left" border="0" cellpadding="0" cellspacing="0">
+                           <tr>
+                              <td height="70" class="logo_header">
+                                 <img class="fix" src="https://greenegameerkatpayloadre.blob.core.windows.net/documents/meerkat-safe.png" width="130" border="0" alt="" />
+                              </td>
+                              <td height="70" class="logo_header">
+                                 <img class="fix" src="{{ClientLogo}}" width="100" border="0" alt="" />
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="innerpadding">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                           <tr>
+                              <td class="h2">
+                                {{AlertTitle}}
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="table_padding">
+                        <table width="100%" border="1" cellspacing="0" cellpadding="0" class=" table table-bordered bodycopy">
+                           <tr>
+                              <th>School</th>
+                              <td>{{SchoolCode}}</td>
+                           </tr>
+                           <tr>
+                              <th>Location</th>
+                              <td>{{LocationName}}</td>
+                           </tr>
+                           <tr>
+                              <th>Violation Type</th>
+                              <td>{{ViolationType}}</td>
+                           </tr>
+                           <tr>
+                              <th>Date & Time</th>
+                              <td>{{DateTime}}</td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+				  
+                  <tr>
+                     <td class="table_padding">
+                        <table width="100%" border="1" cellspacing="0" cellpadding="0" class=" table table-bordered bodycopy">
+                           <tr>
+                              <th class="thead_bg">Name</th>
+                              <th class="thead_bg">Grade</th>
+                           </tr>
+						   {{#each EmailPersonData}}
+                           <tr>
+                              <td>{{this.PersonName}}</td>
+                              <td>{{this.PersonGrade}}</td>
+                           </tr>
+						    {{/each}}  
+                        </table>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="innerpadding bodycopy">
+                        <span>Regards,</span><br>
+                        <span>{{AppSignature}}</span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td class="footer" bgcolor="#eaf2dc">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>&nbsp;</td></tr></table>
+                     </td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+   </body>
+</html>
